@@ -9,6 +9,5 @@
 * Ansible Development with Containers	
 * Take Inventory of the Infrastructure		
 * Execute Ansible Playbook in Windows	
-* Building Reusable Configurations 
 * Dynamic Inventories for Scaling
 * Build a CI \ CD pipeline for Ansible with Github Actions
