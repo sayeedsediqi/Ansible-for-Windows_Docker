@@ -1,4 +1,4 @@
-Setup an Ansible Environment
+Setup Ansible Environment
 
 Run the  ConfigureRemotingForAnsible.ps1  to all windows hosts to set up the basics. This script sets up both HTTP and HTTPS listeners with a self-signed certificate and enables the Basic authentication option on the service.
 To use this script, run the following in PowerShell (as Administrator):
