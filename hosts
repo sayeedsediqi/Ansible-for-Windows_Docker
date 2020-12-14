@@ -1,0 +1,11 @@
+[win]
+10.xx.xx.x
+10.xx.xx.x
+
+[win:vars]
+ansible_user=admin
+ansible_password=password
+ansible_connection=winrm
+ansible_winrm_port= 5986
+ansible_winrm_scheme=ntlm
+ansible_winrm_server_cert_validation=ignore
