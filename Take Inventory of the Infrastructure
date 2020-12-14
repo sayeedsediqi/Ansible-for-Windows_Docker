@@ -1,0 +1,20 @@
+Take Inventory of the Infrastructure
+
+Inventories describe your infrastructure by listing hosts and groups of hosts. Using an inventory
+gives you the ability to share common variables among groups. Inventories are also parsable with
+host patterns, giving you the ability to broadly or narrowly target your infrastructure with Ansible
+automation. In its simplest form, an Ansible inventory is a file.
+
+Example :
+Within your infrastructure, you have three web servers and a database server. The Ansible
+inventory might look like this:
+
+ini inventory file
+[webservers]
+web01
+web02
+web03
+[dbservers]
+db01
+
+
