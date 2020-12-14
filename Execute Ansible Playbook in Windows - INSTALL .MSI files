@@ -1,0 +1,16 @@
+---
+- hosts: windows
+  connection: local
+  roles:
+    - {role: Install MSI's}  
+
+---
+- hosts: windows #The hosts file in inventory
+  vars:
+    Tool: 'test.msi'
+    user: 'hoppert'
+  tasks:
+    - name: Install "{{ Tool }}" and wait for it to complete
+      win_msi:
+        path: C:\Users\{{ user }}\Documents\{{ Tool }}
+        wait: yes
