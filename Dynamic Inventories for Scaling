@@ -1,0 +1,26 @@
+Dynamic Inventories for Scaling
+
+Infrastructure is rarely static. Existing infrastructure is scaled out or up. New infrastructure is
+deployed to support new applications or services. And sometimes new infrastructure just shows up.
+You don’t always know what it’s for, but you manage it anyhow.
+
+Each of those events requires modifications to the Ansible inventory. Adding hosts to the inventory
+requires you to create a new entry in the hosts file and to assign it to the appropriate groups. While
+doable, this can be cumbersome. Ansible solves the problem of inventory management with
+dynamic inventories.
+
+A dynamic inventory uses an external source to generate the Ansible inventory. That external
+source can be your cloud provider, an IP address management (IPAM) and data center
+infrastructure management (DCIM) tool such as Netbox, or even a custom script that generates
+JSON that Ansible can parse as an inventory.
+
+Dynamic Inventories Playbook example
+
+plugin: azure_rm
+include_vm_resource_groups:
+- ansible
+auth_source: auto
+plain_host_names: yes
+conditional_groups:
+linux: "'linux' in os_profile.system"
+windows: "'windows' in os_profile.system"
